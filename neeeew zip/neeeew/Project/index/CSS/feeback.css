@@ -1,0 +1,188 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('../IMAGES/pexels-pixabay-163236.jpg') no-repeat center center fixed; /* Add your background image URL here */
+    background-size: cover;
+    color: #fff;
+  }
+  
+  /* Feedback Form */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Navbar link animations */
+.nav-link {
+    position: relative !important;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight:bold !important;
+    color: #f8f9f9 !important;
+    transition: color 0.3s ease-in-out !important;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute !important;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0056b3;
+    transition: width 0.3s ease-in-out !important;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+/* Dropdown animation */
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+/* Center the brand */
+.navbar-brand {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+  
+  .feedback-form {
+    padding: 100px;
+    margin-top: 130px;
+   
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 550px; /* Increased width */
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+    perspective: 1000px;
+  }
+  
+  .feedback-form h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form label {
+    color: #d0e7f2;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .feedback-form input, .feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    font-family: inherit;
+    transition: background 0.3s ease;
+  }
+  
+  .feedback-form input:focus, .feedback-form textarea:focus {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .feedback-form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  /* Rating Stars */
+  .rating {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .rating input:checked ~ label {
+    color: #ffd700;
+  }
+  
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #ffd700;
+  }
+  
+  .rating label:hover {
+    transform: scale(1.3);
+  }
+  
+  /* Form Button */
+  .feedback-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #005678, #00a8e8);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .feedback-form button:hover {
+    background: linear-gradient(135deg, #00a8e8, #005678);
+  }
+  
+  /* Hover 3D Effect */
+  .feedback-form:hover {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  }
